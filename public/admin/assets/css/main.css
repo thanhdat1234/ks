@@ -1,0 +1,504 @@
+*{margin:0;padding:0; }
+
+.upload-btn-wrapper button.btn.btn-primary:hover {
+    background: white;
+    color:  black;
+}
+
+.upload-btn-wrapper button.btn.btn-primary {
+    background: #00ba51;
+}
+
+.pull-right .upload-btn-wrapper .btn:hover {
+    background: white;
+    color:  black;
+}
+
+img#load {
+    background: white;
+    border-radius: 50%;
+}
+
+.modal h2.panel-title {
+    color: white;
+}
+
+button.btn.btn-danger.btn-cancel {
+    background: white;
+    color:  black;
+}
+
+span#logo {
+    width: 100%;
+}
+
+#logo span {
+    font-size: 16px;
+    color: red;
+}
+
+#logo a {
+    font-size: 16px;
+    color: blue;
+    font-weight: 600;
+}
+
+.table-price form {
+    padding-right: 20px;
+}
+
+h3.mailbox-email-subject.m-none.text-light {
+    color:  black;
+    font-weight:  500;
+}
+
+body .btn-primary:active, body .btn-primary:focus {
+    background: white;
+    color:  black;
+}
+
+button.btn.btn-primary.modal-confirm:hover {
+    background: white;
+    color:  black;
+}
+
+button.btn.btn-default.modal-dismiss:hover {
+    background: white;
+}
+
+h2.panel-title {
+    font-weight:  600;
+}
+
+button.btn.btn-default.modal-dismiss {
+    background:  cadetblue;
+}
+
+.form-horizontal .control-label {
+    color:  black;
+    font-size:  18px;
+    font-weight: 600;
+}
+
+.modal-confirm i.fa {
+    padding-right: 10px;
+}
+
+button.btn.btn-primary.modal-confirm {
+    background: #00ba51;
+}
+
+nav ul li a {
+    line-height: 32px;
+}
+
+.room-info {
+    padding-bottom:  20px;
+    border-bottom: 1px solid #80808059;
+}
+
+.chooe-image i.fa {
+    padding-right: 7px;
+}
+
+.chooe-image {padding-bottom:  20px;padding-top: 20px;}
+
+.pull-right .upload-btn-wrapper .btn {
+    margin-top: 5px;
+    font-size: 16px;
+    background: #00BA51;
+}
+
+.pull-right.choose.text-center {
+    margin-top: 0px;
+}
+
+.choose i.fa.fa-file {
+    padding-right: 10px;
+}
+
+.inbox-nav-bar .btn-group a:hover {
+    background: white;
+    color: #578a89;
+}
+
+.inbox-nav-bar .btn-group a {
+    background: #578a89;
+    color: white;
+    font-size: 15px;
+}
+
+form.background-form {
+    background: white;
+    padding: 30px;
+    border: 1px solid #8080804d;
+}
+
+.form-group.thanks-word {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #989090;
+    margin-bottom: 33px;
+}
+
+tbody {
+    background: white;
+}
+
+input.form-control {
+    height:  56px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background: white;
+}
+
+.choose.text-center {
+    margin-top: 30px;
+}
+
+.top-btn i.fa {
+    padding-right: 10px;
+}
+
+a.top-btn:hover {background: white !important;color:  black;}
+
+a.top-btn {
+    background: #00BA51;
+    margin-top:  3px;
+    font-size: 16px;
+}
+
+.breadcrumb>.active {
+    color: #989696;
+}
+
+.breadcrumb li a {
+    color: black;
+}
+
+.panel-heading-icon.bg-primary.mt-sm.title-service {
+    background: chocolate;
+}
+
+.panel-heading-icon.bg-primary.mt-sm.title-account {
+    background: blueviolet;
+}
+
+
+h3.text-semibold.mt-sm {
+    font-size: 18px;
+    color: black;
+}
+
+.breadcrumb>li {
+    display: inline-block;
+    font-size: 18px;
+    background-color: #e5e5e5;
+    text-transform: initial;
+}
+
+#left-panel li {
+    text-transform: capitalize;
+}
+
+.breadcrumb {
+    background-color: #e5e5e5;
+
+}
+
+.row.thongtin {
+    padding-top: 50px;
+}
+
+.body-content {
+    padding: 40px;
+}
+
+section.panel.panel-horizontal {
+    margin: 0px auto;
+    width: 80%;
+    height: 198px;
+    margin-bottom: 66px;
+}
+
+.panel-heading-icon.bg-primary.donhang.mt-sm {
+    background: darkcyan;
+}
+
+.panel-heading-icon.bg-primary.doanhthu.mt-sm {
+    background: brown;
+}
+
+.panel-heading-icon.bg-primary.tintuc.mt-sm {
+    background: darkgoldenrod;
+}
+
+.panel-heading-icon.bg-primary {
+    background: #0088cc;
+}
+span.title{
+  
+font-size: 16px;
+  
+color: black;
+  
+padding-left: 5px;
+  
+font-weight: 500;
+}
+
+.title-main{
+
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text-center a{
+
+    font-size: 18px;
+}
+
+.edit-write a{
+    color: #0088cc;
+
+}
+.delete-write a{
+
+    color: red;
+}
+
+.modal-block {
+    background: transparent;
+    padding: 0;
+    width:  initial;
+    max-width: 700px;
+    margin: 40px auto;
+    position: absolute;
+    height: 500px;
+    top: 250px;
+    padding-right:  0px !important;
+}
+
+.title-form{
+
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor:  pointer;
+  }
+  
+  .btn {
+    border-radius: 4px;
+    color: white;
+    background-color: #00ba51;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor:  pointer;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    opacity: 0;
+  }
+
+  .inbox-body .table-wrap {
+    background: #fff;
+    padding: 10px 14px 7px;
+    position: relative;
+    margin-left: 0px;
+    overflow-x: hidden;
+    min-height: 500px;
+}
+
+.inbox-checkbox-triggered>.btn-group {
+    margin-right: 0px;
+    margin-left: 15px;
+}
+
+@media (max-width:414px) {
+    *{}
+
+    .modal-block {
+        background: transparent;
+        padding: 0;
+        width: initial;
+        max-width: 700px;
+        margin-right:  10px;
+        margin-left: 10px;
+        position: absolute;
+    }
+    
+}
+
+@media (max-width:600px) {
+    *{}
+
+    .modal-block {
+        background: transparent;
+        padding: 0;
+        width: initial;
+        max-width: 700px;
+        margin-right:  10px;
+        margin-left: 10px;
+        position: absolute;
+    }
+    
+}
+
+
+
+.table-price ul.tabs.tabs-title.clearfix {
+    list-style: none;
+    margin: auto;
+    overflow: hidden;
+    border: none;
+    display: block;
+    background: #ebebeb;
+    line-height: 40px;
+    padding: 0 20px;
+    float:  none;
+    width: 224px;
+    margin-bottom: 15px;
+}
+
+td.price-room {
+    text-align:  center;
+    font-size:  19px;
+    font-weight: 600;
+}
+
+table i.fa {
+    padding-right: 10px;
+    font-weight: 500;
+    color: darkgoldenrod;
+}
+
+table tbody p {
+    line-height: 40px;
+    font-weight:  700;
+    color:  black;
+}
+
+.table-price h2 {
+    font-size: 20px;
+    text-transform:  uppercase;
+    font-weight: 600;
+    text-align:  center;
+    margin:  0px;
+    padding:  20px;
+    color:  black;
+    background:  beige;
+    box-shadow: 0 1px 0px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+tbody td {
+    padding-left: 20px;
+    line-height: 75px;
+    border: 1px solid #80808014;
+}
+
+table h2 {
+    text-align:  center;
+    font-weight: 600;
+    text-transform:  uppercase;
+}
+
+table thead {
+    line-height: 60px;
+    background:  beige;
+    font-size: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+h1#b{
+    padding-top: 0px;
+    padding-left: 0px;
+    font-size: 16px;
+    margin-top: 2px;
+    padding-bottom: 0px;
+    height: 35px;
+    margin-bottom: 0px;
+    text-shadow: 0 1px 0 #ccc, 
+                   0 2px 0 #c9c9c9,
+                   0 3px 0 #bbb,
+                   0 4px 0 #b9b9b9,
+                   0 5px 0 #aaa,
+                   0 6px 1px rgba(0,0,0,.1),
+                   0 0 5px rgba(0,0,0,.1),
+                   0 1px 3px rgba(0,0,0,.3),
+                   0 3px 5px rgba(0,0,0,.2),
+                   0 5px 10px rgba(0,0,0,.25),
+                   0 10px 10px rgba(0,0,0,.2),
+                   0 20px 20px rgba(0,0,0,.15);
+    }
+
+
+    .jarviswidget .btn {
+        background: white;
+        font-size: 12px;
+        color: black;
+    }
+
+    .note-toolbar.btn-toolbar {
+        border-top: 1px solid #dadadb;
+    }
+
+    a.button-icon.jarviswidget-delete-btn {
+        display: none;
+    }
+
+    .modal {
+        text-align: center;
+        padding: 0!important;
+      }
+
+    .form-modal.modal {
+        text-align: center;
+        padding: 0!important;
+      }
+      
+      .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+      }
+      
+      .modal-dialog {
+        display: none;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      .jarviswidget .modal-dialog {
+        display:inline-block !important;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      .hotel-form .note-editor .note-editable {
+        clear: both;
+        background: #FFF;
+        border: none;
+        height: 500px;
+        min-height: 500px;
+        border-radius: 0 0 4px 4px;
+        font-family: Arial, Helvetica, Sans-serif;
+    }

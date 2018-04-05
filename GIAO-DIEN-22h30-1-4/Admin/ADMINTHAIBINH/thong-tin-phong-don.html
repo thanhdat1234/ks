@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>phòng đơn</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- #CSS links -->
+	<!-- Basic Styles -->
+	<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+	<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+	<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/theme.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+	<!-- #GOOGLE FONT -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+</head>
+<body class="smart-style-0">
+	<!-- #HEADER -->
+	<header id="header">
+		<div id="logo-group">
+			<!-- PLACE YOUR LOGO HERE -->
+			<span id="logo">
+				<h1 id="b" class="navbar-brand">
+					<a href="index.html#body">NHÀ NGHỈ
+						<span>THÁI BÌNH</span>
+					</a>
+				</h1>
+			</span>
+			<!-- END LOGO PLACEHOLDER -->
+		</div>
+		<!-- #PROJECTS: projects dropdown -->
+		<div class="project-context hidden-xs">
+
+			<span class="label">
+				<ol class="breadcrumb">
+					<li>
+						<a href="index.html" title="Quay về trang chủ">Trang chủ</a>
+					</li>
+					<li class="active">Phòng đơn</li>
+				</ol>
+			</span>
+		</div>
+		<!-- end projects dropdown -->
+		<!-- #TOGGLE LAYOUT BUTTONS -->
+		<!-- pulled right: nav area -->
+		<div class="pull-right choose text-center">
+			<a type="button" class="btn btn-primary top-btn" data-toggle="modal" href="#modalHeaderColorSuccess" title="Lưu phòng đơn"
+			 onclick="Hideimage()">
+				<i class="fa fa-save"></i>Lưu</a>
+			<!-- collapse menu button -->
+			<div id="hide-menu" class="btn-header pull-right">
+				<span>
+					<a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu">
+						<i class="fa fa-reorder"></i>
+					</a>
+				</span>
+			</div>
+			<!-- #MOBILE -->
+			<!-- Top menu profile link : this shows only when top menu is active -->
+			<ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+				<li class="">
+
+					<ul class="dropdown-menu pull-right">
+						<li>
+							<a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0">
+								<i class="fa fa-cog"></i> Setting</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="#ajax/profile.html" class="padding-10 padding-top-0 padding-bottom-0">
+								<i class="fa fa-user"></i>
+								<u>P</u>rofile</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="toggleShortcut">
+								<i class="fa fa-arrow-down"></i>
+								<u>S</u>hortcut</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="launchFullscreen">
+								<i class="fa fa-arrows-alt"></i> Full
+								<u>S</u>creen</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="login.html" class="padding-10 padding-top-5 padding-bottom-5" data-action="userLogout">
+								<i class="fa fa-sign-out fa-lg"></i>
+								<strong>
+									<u>L</u>ogout</strong>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- multiple lang dropdown : find all flags in the flags page -->
+			<div id="fullscreen" class="btn-header transparent pull-right">
+				<span>
+					<a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen">
+						<i class="fa fa-arrows-alt"></i>
+					</a>
+				</span>
+			</div>
+		</div>
+		<!-- end pulled right: nav area -->
+	</header>
+	<!-- END HEADER -->
+	<!-- #NAVIGATION -->
+	<!-- Left panel : Navigation area -->
+	<aside id="left-panel">
+		<!-- NAVIGATION : This navigation is also responsive-->
+		<nav>
+			<ul>
+				<li class="">
+					<a href="index.html" onclick="location.href='index.html'" title="Trang chủ">
+						<i class="fa fa-lg fa-fw fa-home"></i>
+						<span class="menu-item-parent">Trang chủ</span>
+					</a>
+				</li>
+				<!-- li / end -->
+				<li>
+					<a href="#">
+						<i class="fa fa-lg fa-fw fa fa-info-circle"></i>
+						<span class="menu-item-parent">Thông tin phòng</span>
+					</a>
+					<ul>
+						<li>
+							<a href="thong-tin-phong-don.html" onclick="location.href='thong-tin-phong-don.html'" title="Phòng đơn">Phòng đơn</a>
+						</li>
+						<li>
+							<a href="thong-tin-phong-doi.html" onclick="location.href='thong-tin-phong-doi.html'" title="Phòng đôi">Phòng đôi</a>
+						</li>
+					</ul>
+				</li>
+				<!-- li / end -->
+				<li>
+					<a href="thong-tin-nha-nghi.html" onclick="location.href='thong-tin-nha-nghi.html'" title="thông tin nhà nghỉ">
+						<i class="fa fa-lg fa fa-building-o" aria-hidden="true"></i>
+						<span class="menu-item-parent">Thông tin nhà nghỉ</span>
+					</a>
+
+				</li>
+				<!-- li / end -->
+				<li>
+					<a href="#">
+						<i class="fa fa-lg fa-fw fa fa-picture-o"></i>
+						<span class="menu-item-parent">Hình ảnh</span>
+					</a>
+					<ul>
+						<li>
+							<a href="hinh-anh-slider.html" onclick="location.href='hinh-anh-slider.html'" title="hình ảnh Slider">Hình ảnh slider</a>
+						</li>
+						<li>
+							<a href="hinh-anh-nha-nghi.html" onclick="location.href='hinh-anh-nha-nghi.html'" title="Hình ảnh nhà nghỉ">Hình ảnh nhà nghỉ</a>
+						</li>
+						<li>
+							<a href="hinh-anh-dao-phu-quy.html" onclick="location.href='hinh-anh-dao-phu-quy.html'" title="Hình ảnh đảo Phú Qúy">Hình ảnh đảo phú quý</a>
+						</li>
+					</ul>
+				</li>
+				<!-- li / end -->
+			</ul>
+		</nav>
+	</aside>
+	<!-- END NAVIGATION -->
+	<!-- #MAIN PANEL -->
+	<div id="main" role="main">
+		<div class="body-content">
+			<div class="row thongtin">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 room-info">
+						<div class="row">
+							<div class=" col-md-8 col-lg-8">
+								<!-- widget content -->
+								<div class="widget-body" style="margin-bottom: 30px">
+									<form>
+										<fieldset>
+											<input name="authenticity_token" type="hidden">
+											<div class="form-group">
+												<label class="title-form">Giá</label>
+												<input class="form-control testInput" placeholder="Nhập giá" title="Nhập giá">
+												</textarea>
+											</div>
+											<div class="form-group">
+												<label class="title-form">Giá khuyến mãi</label>
+												<input class="form-control testInput" placeholder="Nhập giá khuyễn mãi" title="Nhập giá khuyến mãi">
+												</textarea>
+											</div>
+											<div class="form-group">
+												<label class="title-form">Nội dung</label>
+												<header role="heading"></header>
+												<!-- widget grid -->
+												<section id="widget-grid" class="">
+													<div class="row">
+														<article class="col-sm-12 col-md-12 col-lg-12">
+															<div class="jarviswidget jarviswidget-color-blue" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false"
+															 data-widget-togglebutton="false" data-widget-fullscreenbutton="false" data-widget-sortable="false">
+																<header role="heading"></header>
+																<!-- widget div-->
+																<div>
+																	<!-- widget edit box -->
+																	<div class="jarviswidget-editbox">
+																		<!-- This area used as dropdown edit box -->
+
+																	</div>
+																	<!-- end widget edit box -->
+
+																	<!-- widget content -->
+																	<div class="widget-body no-padding">
+																		<div class="summernote">
+
+																		</div>
+
+																		<div class="widget-footer smart-form">
+																		</div>
+																	</div>
+																	<!-- end widget content -->
+																</div>
+																<!-- end widget div -->
+															</div>
+															<!-- end widget -->
+														</article>
+														<!-- WIDGET END -->
+													</div>
+													<!-- end row -->
+												</section>
+												<!-- end widget grid -->
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								<!-- end widget content -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- row / end -->
+				<div class="row">
+					<div class="col-md-12 col-lg-12 chooe-image">
+						<div class="upload-btn-wrapper">
+
+							<button class="btn btn-primary" title="Chọn hình">
+								<i class="fa fa-film" aria-hidden="true"></i>
+								<span>Chọn hình</span>
+							</button>
+						</div>
+					</div>
+					<!-- row / start -->
+					<div class="row">
+						<div class="col-md-3 col-lg-3">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="fa fa-times"></a>
+									</div>
+
+									<h2 class="panel-title">Controls Disabled</h2>
+								</header>
+								<div class="panel-body">
+									<div class="owl-carousel owl-theme owl-carousel-init" style="display: block; opacity: 1;">
+										<div class="owl-wrapper-outer autoHeight">
+											<div class="owl-wrapper">
+												<div class="owl-item">
+													<div class="item">
+														<img alt="" class="img-responsive" src="img/1.jpg">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!-- col / end -->
+						<div class="col-md-3 col-lg-3">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="fa fa-times"></a>
+									</div>
+
+									<h2 class="panel-title">Controls Disabled</h2>
+								</header>
+								<div class="panel-body">
+									<div class="owl-carousel owl-theme owl-carousel-init" style="display: block; opacity: 1;">
+										<div class="owl-wrapper-outer autoHeight">
+											<div class="owl-wrapper">
+												<div class="owl-item">
+													<div class="item">
+														<img alt="" class="img-responsive" src="img/dao2.jpg">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!-- col / end -->
+						<div class="col-md-3 col-lg-3">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="fa fa-times"></a>
+									</div>
+
+									<h2 class="panel-title">Controls Disabled</h2>
+								</header>
+								<div class="panel-body">
+									<div class="owl-carousel owl-theme owl-carousel-init" style="display: block; opacity: 1;">
+										<div class="owl-wrapper-outer autoHeight">
+											<div class="owl-wrapper">
+												<div class="owl-item">
+													<div class="item">
+														<img alt="" class="img-responsive" src="img/4.jpg">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!-- col / end -->
+						<div class="col-md-3 col-lg-3">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="fa fa-times"></a>
+									</div>
+
+									<h2 class="panel-title">Controls Disabled</h2>
+								</header>
+								<div class="panel-body">
+									<div class="owl-carousel owl-theme owl-carousel-init" style="display: block; opacity: 1;">
+										<div class="owl-wrapper-outer autoHeight">
+											<div class="owl-wrapper">
+												<div class="owl-item">
+													<div class="item">
+														<img alt="" class="img-responsive" src="img/3.jpg">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!-- col / end -->
+					</div>
+					<!-- row / end -->
+					<!-- row / start -->
+					<div class="row">
+						<div class="col-md-3 col-lg-3">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="fa fa-times"></a>
+									</div>
+
+									<h2 class="panel-title">Controls Disabled</h2>
+								</header>
+								<div class="panel-body">
+									<div class="owl-carousel owl-theme owl-carousel-init" style="display: block; opacity: 1;">
+										<div class="owl-wrapper-outer autoHeight">
+											<div class="owl-wrapper">
+												<div class="owl-item">
+													<div class="item">
+														<img alt="" class="img-responsive" src="img/1.jpg">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!-- col / end -->
+						<div class="col-md-3 col-lg-3">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="fa fa-times"></a>
+									</div>
+
+									<h2 class="panel-title">Controls Disabled</h2>
+								</header>
+								<div class="panel-body">
+									<div class="owl-carousel owl-theme owl-carousel-init" style="display: block; opacity: 1;">
+										<div class="owl-wrapper-outer autoHeight">
+											<div class="owl-wrapper">
+												<div class="owl-item">
+													<div class="item">
+														<img alt="" class="img-responsive" src="img/dao2.jpg">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!-- col / end -->
+						<div class="col-md-3 col-lg-3">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="fa fa-times"></a>
+									</div>
+
+									<h2 class="panel-title">Controls Disabled</h2>
+								</header>
+								<div class="panel-body">
+									<div class="owl-carousel owl-theme owl-carousel-init" style="display: block; opacity: 1;">
+										<div class="owl-wrapper-outer autoHeight">
+											<div class="owl-wrapper">
+												<div class="owl-item">
+													<div class="item">
+														<img alt="" class="img-responsive" src="img/4.jpg">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!-- col / end -->
+						<div class="col-md-3 col-lg-3">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="fa fa-times"></a>
+									</div>
+
+									<h2 class="panel-title">Controls Disabled</h2>
+								</header>
+								<div class="panel-body">
+									<div class="owl-carousel owl-theme owl-carousel-init" style="display: block; opacity: 1;">
+										<div class="owl-wrapper-outer autoHeight">
+											<div class="owl-wrapper">
+												<div class="owl-item">
+													<div class="item">
+														<img alt="" class="img-responsive" src="img/3.jpg">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!-- col / end -->
+					</div>
+					<!-- row / end -->
+				</div>
+				<!-- row / end -->
+				<!-- Modal success -->
+				<div id="modalHeaderColorSuccess" class="modal fade modal-header-color modal-block-success">
+					<img src="img/load.gif" id="load">
+					<section class="form-modal modal-dialog">
+						<header class="panel-heading">
+							<h2 class="panel-title">Thành công!</h2>
+						</header>
+						<div class="panel-body">
+							<div class="modal-wrapper">
+								<div class="modal-icon">
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</div>
+								<div class="modal-text">
+									<h4 style="color: black;">Lưu thành công !</h4>
+								</div>
+							</div>
+						</div>
+						<footer class="panel-footer">
+							<div class="row">
+								<div class="col-md-12 text-right">
+									<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+								</div>
+							</div>
+						</footer>
+					</section>
+				</div>
+				<!-- Modal success / end-->
+			</div>
+		</div>
+	</div>
+
+
+	<!-- END #MAIN CONTENT -->
+
+	</div>
+	<!-- END #MAIN PANEL -->
+
+
+
+
+	<!-- #PLUGINS -->
+	<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+
+	<script>
+		if (!window.jQuery) {
+			document.write('<script src="js/data/jquery-2.1.1.min.js"><\/script>');
+		}
+	</script>
+
+
+	<script>
+		if (!window.jQuery.ui) {
+			document.write('<script src="js/data/jquery-ui-1.10.3.min.js"><\/script>');
+		}
+	</script>
+
+	<!-- IMPORTANT: APP CONFIG -->
+	<script src="js/data//app.config.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+	<!-- BOOTSTRAP JS -->
+	<script src="js/data/bootstrap.min.js"></script>
+
+	<!-- SPARKLINES -->
+	<script src="js/data/jquery.sparkline.min.js"></script>
+
+	<!-- JQUERY VALIDATE -->
+	<script src="js/data/jquery.validate.min.js"></script>
+
+	<!-- browser msie issue fix -->
+	<script src="js/data/jquery.mb.browser.min.js"></script>
+
+	<!-- FastClick: For mobile devices: you can disable this in app.js -->
+	<script src="js/data/fastclick.min.js"></script>
+
+	<!--[if IE 8]>
+			<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+		<![endif]-->
+
+	<!-- JAVISWIDGET -->
+	<script src="js/data/jarvis.widget.min.js"></script>
+
+	<script type="text/javascript" src="js/data/summernote.min.js"></script>
+
+	<!-- MAIN APP JS FILE -->
+	<script src="js/data/app.min.js"></script>
+
+	<script src="js/data/autoNumeric.js"></script>
+
+	<script src="js/data/examples.modals.js"></script>
+
+	<script src="js/data/main.js"></script>
+
+
+	<script type="text/javascript">
+
+		/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+		 *
+		 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+		 *
+		 * // activate tooltips
+		 * $("[rel=tooltip]").tooltip();
+		 *
+		 * // activate popovers
+		 * $("[rel=popover]").popover();
+		 *
+		 * // activate popovers with hover states
+		 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+		 *
+		 * // activate inline charts
+		 * runAllCharts();
+		 *
+		 * // setup widgets
+		 * setup_widgets_desktop();
+		 *
+		 * // run form elements
+		 * runAllForms();
+		 *
+		 ********************************
+		 *
+		 * pageSetUp() is needed whenever you load a page.
+		 * It initializes and checks for all basic elements of the page
+		 * and makes rendering easier.
+		 *
+		 */
+
+		pageSetUp();
+
+		// PAGE RELATED SCRIPTS
+
+		// pagefunction
+
+		var pagefunction = function () {
+
+			// summernote
+			$('.summernote').summernote({
+				height: 180,
+				focus: false,
+				tabsize: 2
+			});
+
+			// markdown
+			$("#mymarkdown").markdown({
+				autofocus: false,
+				savable: true
+			})
+
+		};
+
+		// end pagefunction
+
+		// destroy generated instances
+		// pagedestroy is called automatically before loading a new page
+		// only usable in AJAX version!
+
+		var pagedestroy = function () {
+
+			// destroy summernote
+			$(".summernote").summernote('destroy');
+
+			//destroy markdown
+			$("#mymarkdown").markdown('destroy');
+
+			// debug msg
+			if (debugState) {
+				root.console.log("âœ” Summernote and Markdown editors destroyed");
+			}
+
+		}
+
+		// end destroy
+		// load summernote, and all markdown related plugins
+		loadScript("js/data/summernote.min.js", function () {
+			loadScript("js/data/markdown.min.js", function () {
+				loadScript("js/data/to-markdown.min.js", function () {
+					loadScript("js/data/bootstrap-markdown.min.js", pagefunction);
+				});
+			});
+		});
+
+	</script>
+
+
+
+	<!-- Your GOOGLE ANALYTICS CODE Below -->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-43548732-3']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+
+</html>
