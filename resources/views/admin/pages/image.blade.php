@@ -10,6 +10,10 @@
 
                 <!-- row / start -->
                 <div class="row">
+                    <i>Giới hạn hình ảnh rộng : {{$dataz->max_width}}  -  cao : {{$dataz->max_height}}</i>
+                    <br>
+                    <i>Khi bạn không chọn đúng kích thước hệ thống sẽ tự co hình ảnh giúp bạn !</i>
+                    <br>
                     @if(!empty($imgxz))
                     @foreach($imgxz as $key => $value)
                     <div class="col-md-3 col-lg-3">
@@ -72,7 +76,7 @@
                 </section>
             </div>
             <!-- Modal Info -->
-            <a data-toggle="modal" class="info-triggle" href="#modalHeaderColorInfo" style="display: none;">Thông tin</a>
+            <a data-toggle="modal" class="info-triggle" href="#modalHeaderColorSuccess" style="display: none;">Thông tin</a>
             <div id="modalHeaderColorInfo" class="modal fade modal-block modal-header-color modal-block-info mfp-hide">
                 <section class="panel">
                     <header class="panel-heading">

@@ -49,6 +49,7 @@ function Hideimage() {
                 success: function (data) {
                     console.log(data);
                     if (data.code == 1) {
+                        $('.info-triggle').click();
                         window.location.reload();
                     } else {
                         $('.info-triggle').click();

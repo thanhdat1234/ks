@@ -24,16 +24,16 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="" onclick="location.href='{{ route('admin.room.getList1',['id'=>1]) }}'" title="Phòng đơn">Phòng đơn</a>
+                        <a href="" onclick="location.href='{{ route('admin.room.getList','phong-don') }}'" title="Phòng đơn">Phòng đơn</a>
                     </li>
                     <li>
-                        <a href="" onclick="location.href='{{ route('admin.room.getList2',['id'=>2]) }}'" title="Phòng đôi">Phòng đôi</a>
+                        <a href="" onclick="location.href='{{ route('admin.room.getList','phong-doi') }}'" title="Phòng đôi">Phòng đôi</a>
                     </li>
                 </ul>
             </li>
             <!-- li / end -->
             <li>
-                <a href="thong-tin-nha-nghi.html" onclick="location.href='thong-tin-nha-nghi.html'" title="thông tin nhà nghỉ">
+                <a href=""  onclick="location.href='{{ route('admin.info.getList','thong-tin-nha-nghi') }}'" title="thông tin nhà nghỉ">
                     <i class="fa fa-lg fa fa-building-o" aria-hidden="true"></i>
                     <span class="menu-item-parent">Thông tin nhà nghỉ</span>
                 </a>

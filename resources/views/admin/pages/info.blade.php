@@ -7,39 +7,112 @@
         <div class="row thongtin">
             <div class="row">
 
-                <!-- row / start -->
-                <div class="row">
-                    <div class="col-md-3 col-lg-3">
-                        <section class="panel">
-                            <header class="panel-heading">
-                                <div class="panel-actions">
-                                    <a href="#" class="fa fa-times"></a>
-                                </div>
-
-                                <h2 class="panel-title">Controls Disabled</h2>
-                            </header>
-                            <div class="panel-body">
-                                <div class="owl-carousel owl-theme owl-carousel-init" style="display: block; opacity: 1;">
-                                    <div class="owl-wrapper-outer autoHeight">
-                                        <div class="owl-wrapper">
-                                            <div class="owl-item">
-                                                <div class="item">
-                                                    <img alt="" class="img-responsive" src="{{url('public/admin/assets')}}/img/1.jpg">
-                                                </div>
-                                            </div>
-                                        </div>
+                <div class="col-md-12 col-lg-12">
+                    <div class="jarviswidget jarviswidget-sortable" id="wid-id-2">
+                        <!-- widget div-->
+                        <div role="content">
+                            @if(count($errors) > 0)
+                                <div class="col-lg-12 my-alert">
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach($errors->all() as $error)
+                                                <li>{!! $error !!}</li>
+                                            @endforeach
+                                        </ul>
                                     </div>
+                                    <hr>
                                 </div>
+                            @endif
+                            <div class="clearfix"></div>
+                            <!-- widget edit box -->
+                            <div class="jarviswidget-editbox">
+                                <!-- This area used as dropdown edit box -->
+
                             </div>
-                        </section>
+                            <!-- end widget edit box -->
+
+                            <!-- widget content -->
+                            <div class="widget-body">
+                                <form action="{{route('admin.info.update')}}" method="post" name="updateinfo">
+
+                                        <input name="authenticity_token" type="hidden">
+                                        <div class="form-group">
+                                            <section class="col-md-8 col-lg-8">
+                                                <label class="title-form">Email</label>
+                                                <input class="form-control" placeholder="Nhập Email" name="email" value="{{$info->email?$info->email:''}}" required type="email">
+                                            </section>
+                                        </div>
+                                        <!-- form / end -->
+                                        <div class="form-group">
+                                            <section class="col-md-4 col-lg-4">
+                                                <label class="title-form">Số điện thoại 1</label>
+                                                <input class="form-control" placeholder="Nhập số điện thoại 1" name="phone_a" value="{{$info->phone_a?$info->phone_a:''}}" type="text">
+                                            </section>
+                                            <section class="col-md-4 col-lg-4">
+                                                <label class="title-form">Số điện thoại 2</label>
+                                                <input class="form-control" placeholder="Nhập số điện thoại 2" name="phone_b" value="{{$info->phone_b?$info->phone_b:''}}" type="text">
+                                            </section>
+                                        </div>
+                                        <!-- form / end -->
+                                        <div class="form-group">
+                                            <section class="col-md-8 col-lg-8">
+                                                <label class="title-form">Địa chỉ</label>
+                                                <input class="form-control" placeholder="Nhập địa chỉ" type="text" name="addr" value="{{$info->addr?$info->addr:''}}">
+                                            </section>
+                                        </div>
+                                        <div class="form-group">
+                                            <section class="col-md-8 col-lg-8">
+                                                <label class="title-form">Nội dung trang giới thiệu</label>
+                                                <textarea name="contentz" id="contentz" hidden></textarea>
+                                            </section>
+                                            <!-- widget grid -->
+                                            <section id="widget-grid" class="">
+                                                <article class="col-md-8 col-lg-8">
+                                                    <div class="jarviswidget jarviswidget-color-blue" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false"
+                                                         data-widget-togglebutton="false" data-widget-fullscreenbutton="false" data-widget-sortable="false">
+                                                        <header role="heading"></header>
+                                                        <!-- widget div-->
+                                                        <div>
+                                                            <!-- widget edit box -->
+                                                            <div class="jarviswidget-editbox">
+                                                                <!-- This area used as dropdown edit box -->
+                                                            </div>
+                                                            <!-- end widget edit box -->
+                                                            <!-- widget content -->
+                                                            <div class="widget-body no-padding">
+                                                                <textarea class="summernote">
+                                                                    {{$info->content}}
+                                                                </textarea>
+                                                                <div class="widget-footer smart-form">
+                                                                </div>
+                                                            </div>
+                                                            <!-- end widget content -->
+                                                        </div>
+                                                        <!-- end widget div -->
+                                                    </div>
+                                                    <!-- end widget -->
+                                                </article>
+                                                <!-- WIDGET END -->
+                                            </section>
+                                        </div>
+                                        <!-- end widget grid -->=
+                                <input type="text" hidden name="_token" value="{{csrf_token()}}">
+                            <!-- form / end -->
+
+                            <!-- fieldset / end -->
+                            </form>
+
+                        </div>
+                        <!-- end widget content -->
+
                     </div>
-                    <!-- col / end -->
+                    <!-- end widget div -->
+
                 </div>
             </div>
-
-            <!-- row / end -->
             <!-- Modal success -->
-            <div id="modalHeaderColorSuccess" class="modal fade modal-block modal-header-color modal-block-success mfp-hide">
+            <div id="modalHeaderColorSuccess" class="modal fade modal-header-color modal-block-success">
+                <img src="{{url('public/admin')}}/img/load.gif" id="load">
                 <section class="form-modal modal-dialog">
                     <header class="panel-heading">
                         <h2 class="panel-title">Thành công!</h2>
@@ -64,39 +137,30 @@
                     </footer>
                 </section>
             </div>
-            <!-- Modal Info -->
-            <a data-toggle="modal" class="info-triggle" href="#modalHeaderColorInfo" style="display: none;">Thông tin</a>
-            <div id="modalHeaderColorInfo" class="modal fade modal-block modal-header-color modal-block-info mfp-hide">
-                <section class="panel">
-                    <header class="panel-heading">
-                        <h2 class="panel-title">Giới hạn hình ảnh!</h2>
-                    </header>
-                    <div class="panel-body">
-                        <div class="modal-wrapper">
-                            <div class="modal-icon">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i>
-                            </div>
-                            <div class="modal-text">
-                                <h4 style="color: black;">Bạn không thể up thêm ảnh !</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <footer class="panel-footer">
-                        <div class="row">
-                            <div class="col-md-12 text-right">
-                                <button type="button" class="btn btn-info" data-dismiss="modal">OK</button>
+            <!-- Modal success / end-->
 
-                            </div>
-                        </div>
-                    </footer>
-                </section>
-            </div>
         </div>
     </div>
 @endsection
 @section('script')
-    <script src="{{url('pubic/admin/assets')}}/js/data/autoNumeric.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+    <script src="{{url('/public/admin/assets')}}/js/data/jquery.mb.browser.min.js"></script>
+
+    <!-- JAVISWIDGET -->
+    <script src="{{url('/public/admin/assets')}}/js/data/jarvis.widget.min.js"></script>
+
+    <script type="text/javascript" src="{{url('/public/admin/assets')}}/js/data/summernote.min.js"></script>
+
+    <script type="text/javascript" src="{{url('/public/admin/assets')}}/js/data/markdown.min.js"></script>
+
+
+    <script src="{{url('/public/admin/assets')}}/js/data/autoNumeric.js"></script>
+
+    <script src="{{url('/public/admin/assets')}}/js/data/examples.modals.js"></script>
+
     <script type="text/javascript">
+        <!-- browser msie issue fix -->
 
         /* DO NOT REMOVE : GLOBAL FUNCTIONS!
          *
@@ -137,19 +201,27 @@
         var pagefunction = function () {
 
             // summernote
-            $('.summernote').summernote({
+            $('.summernote').summernote('code',{
                 height: 180,
                 focus: false,
-                tabsize: 2
-            });
+                tabsize: 2,
 
+            });
+            //var markupStr = $('.summernote').summernote('code');
+            //console.log(markupStr);
             // markdown
             $("#mymarkdown").markdown({
                 autofocus: false,
-                savable: true
+                savable: true,
+                onSave: function(e) {
+                    alert("Saving '"+e.getContent()+"'...")
+                },
             })
 
         };
+        function testxx(e){
+            console.log(e);
+        }
 
         // end pagefunction
 
@@ -157,10 +229,15 @@
         // pagedestroy is called automatically before loading a new page
         // only usable in AJAX version!
 
+        //$(".summernote").summernote('destroy');
+        //var markupStr = $('.summernote').eq(1).summernote('code');
+        //console.log(markupStr);
+
         var pagedestroy = function () {
 
             // destroy summernote
             $(".summernote").summernote('destroy');
+
 
             //destroy markdown
             $("#mymarkdown").markdown('destroy');
@@ -175,24 +252,29 @@
         // end destroy
 
         // load summernote, and all markdown related plugins
-        loadScript("js/data/summernote.min.js", function () {
-            loadScript("js/data/markdown.min.js", function () {
-                loadScript("js/data/to-markdown.min.js", function () {
-                    loadScript("js/data/bootstrap-markdown.min.js", pagefunction);
+        loadScript("{{url('/public/admin/assets')}}/js/data/summernote.min.js", function () {
+            loadScript("{{url('/public/admin/assets')}}/js/data/markdown.min.js", function () {
+                loadScript("{{url('/public/admin/assets')}}/js/data/to-markdown.min.js", function () {
+                    loadScript("{{url('/public/admin/assets')}}/js/data/bootstrap-markdown.min.js", pagefunction);
                 });
             });
         });
+        function submitFormRoom() {
+            var textareaValue = $(".summernote").code();
+            $("#contentz").text(textareaValue);
+            $('form[name="updateinfo"]').submit();
+
+        }
 
     </script>
 @endsection
 @section('headerz')
-    <!-- #PROJECTS: projects dropdown -->
     <div class="project-context hidden-xs">
 
 			<span class="label">
 				<ol class="breadcrumb">
 					<li>
-						<a href="index.html">Trang chủ</a>
+						<a href="{{url('/admin')}}" title="Quay về trang chủ">Trang chủ</a>
 					</li>
 					<li class="active">{{$title_z}}</li>
 				</ol>
@@ -202,19 +284,14 @@
     <!-- #TOGGLE LAYOUT BUTTONS -->
     <!-- pulled right: nav area -->
     <div class="pull-right choose text-center">
-
-        <div class="upload-btn-wrapper">
-            <a type="button" class="btn btn-primary top-btn" title="Chọn hình">
-                <i class="fa fa-file"></i>Chọn hình</a>
-            <input style="display: none;" type="file" name="myfile" />
-        </div>
-
-
+        <a href="javascript:void(0)" class="btn btn-primary top-btn" data-toggle="modal" href="#modalHeaderColorSuccess" title="Lưu"
+           onclick="return submitFormRoom();">
+            <i class="fa fa-save"></i>Lưu</a>
         <!-- collapse menu button -->
         <div id="hide-menu" class="btn-header pull-right">
 				<span>
 					<a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu">
-						<i class="fa fa-file"></i>
+						<i class="fa fa-reorder"></i>
 					</a>
 				</span>
         </div>

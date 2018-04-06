@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Frontend\IndexController@index');
+Route::get('/chi-tiet-{slug}.html',['as'=>'home.page.room','uses'=>'Frontend\IndexController@pageRoom']);
+Route::get('/hinh-anh.html',['as'=>'home.page.img','uses'=>'Frontend\IndexController@pageImage']);
+Route::get('/dich-vu.html',['as'=>'home.page.service','uses'=>'Frontend\IndexController@pageService']);
 
 
 
@@ -35,19 +36,14 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 Route::group(['prefix' => 'admin','middleware'=>'admin'], function () {
+
     Route::group(['prefix' => 'room'], function () {
         Route::get('/',['as'=>'admin.room.getList','uses'=>'Backend\RoomController@getList']);
+        Route::get('{slug}.html',['as'=>'admin.room.getList','uses'=>'Backend\RoomController@getList'])->where(['slug'=>'[a-zA-Z\-]+']);
+        Route::post('files-{slug}',['as'=>'admin.room.postFile','uses'=>'Backend\RoomController@postFile'])->where(['slug'=>'[a-zA-Z\-]+']);
+        Route::post('delete',['as'=>'admin.room.removeFile','uses'=>'Backend\RoomController@removeFile']);
+        Route::post('update-{slug}',['as'=>'admin.room.update','uses'=>'Backend\RoomController@update'])->where(['slug'=>'[a-zA-Z\-]+']);
 
-        Route::get('thong-tin-phong-don-{id}',['as'=>'admin.room.getList1','uses'=>'Backend\RoomController@getList']);
-        Route::get('thong-tin-phong-doi-{id}',['as'=>'admin.room.getList2','uses'=>'Backend\RoomController@getList']);
-
-        Route::get('add',['as'=>'admin.pdt.getAdd','uses'=>'Backend\ProductController@getAdd']);
-        Route::post('add',['as'=>'admin.pdt.postAdd','uses'=>'Backend\ProductController@postAdd']);
-        Route::get('edit/{id}',['as'=>'admin.pdt.getEdit','uses'=>'Backend\ProductController@getEdit']);
-        Route::post('edit/{id}',['as'=>'admin.pdt.postEdit','uses'=>'Backend\ProductController@postEdit']);
-        Route::post('DelImg',['as'=>'admin.pdt.getDelImg','uses'=>'Backend\ProductController@getDelImg']);
-        Route::post('UpdateItem',['as'=>'admin.pdt.postUpdateItem','uses'=>'Backend\ProductController@postUpdateItem']);
-        Route::post('delItem',['as'=>'admin.pdt.DelItem','uses'=>'Backend\ProductController@DelItem']);
     });
 
     Route::group(['prefix' => 'imgs'], function () {
@@ -59,7 +55,7 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function () {
 
     Route::group(['prefix' => 'info'], function () {
         //img
-        Route::get('{slug}.html',['as'=>'admin.info.getInfo','uses'=>'Backend\InfoController@getInfo'])->where(['slug'=>'[a-zA-Z\-]+']);
-        Route::post('update',['as'=>'admin.info.updateInfo','uses'=>'Backend\InfoController@updateInfo'])->where(['slug'=>'[a-zA-Z\-]+']);
+        Route::get('{slug}.html',['as'=>'admin.info.getList','uses'=>'Backend\InfoController@getList'])->where(['slug'=>'[a-zA-Z\-]+']);
+        Route::post('update',['as'=>'admin.info.update','uses'=>'Backend\InfoController@update']);
     });
 });
